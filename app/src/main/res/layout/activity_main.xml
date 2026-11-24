@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mainRoot"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_gradient"
+    android:clipToPadding="false"
+    tools:context=".MainActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:clipToPadding="false"
+        android:fillViewport="true"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:orientation="vertical"
+            android:paddingHorizontal="@dimen/screen_padding"
+            android:paddingTop="@dimen/space_l"
+            android:paddingBottom="112dp"
+            android:layoutAnimation="@anim/layout_animation_slide_up">
+
+            <!-- ===== Location ===== -->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="22dp"
+                    android:layout_height="22dp"
+                    android:layout_marginEnd="@dimen/space_s"
+                    android:contentDescription="@string/cd_location"
+                    android:src="@drawable/ic_location" />
+
+                <TextView
+                    android:id="@+id/tvCity"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="New York"
+                    android:textAppearance="@style/TextAppearance.WeatherApp.City" />
+            </LinearLayout>
+
+            <!-- ===== Weather status ===== -->
+            <TextView
+                android:id="@+id/tvStatus"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="@dimen/space_xs"
+                android:text="Cloudy"
+                android:textAppearance="@style/TextAppearance.WeatherApp.Status" />
+
+            <!-- ===== Hero card: animation + temperature ===== -->
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/space_l"
+                app:cardBackgroundColor="@color/surface_hero"
+                app:cardCornerRadius="@dimen/card_corner"
+                app:cardElevation="@dimen/hero_elevation"
+                app:contentPadding="@dimen/space_l">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical">
+
+                    <com.airbnb.lottie.LottieAnimationView
+                        android:id="@+id/weatherAnimation"
+                        android:layout_width="200dp"
+                        android:layout_height="200dp"
+                        app:lottie_autoPlay="true"
+                        app:lottie_loop="true" />
+
+                    <TextView
+                        android:id="@+id/tvTemp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/space_s"
+                        android:text="25°C"
+                        android:textAppearance="@style/TextAppearance.WeatherApp.Temp" />
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- ===== Metrics ===== -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/space_l"
+                android:layout_marginBottom="@dimen/space_s"
+                android:text="@string/details"
+                android:textAppearance="@style/TextAppearance.WeatherApp.MetricLabel" />
+
+            <!-- Wind -->
+            <com.google.android.material.card.MaterialCardView
+                style="@style/Widget.WeatherApp.MetricCard"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/space_s">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="@dimen/icon_chip_size"
+                        android:layout_height="@dimen/icon_chip_size"
+                        android:background="@drawable/bg_icon_chip"
+                        android:contentDescription="@string/cd_wind"
+                        android:padding="@dimen/icon_chip_padding"
+                        android:src="@drawable/ic_wind" />
+
+                    <TextView
+                        android:id="@+id/tvWind"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/space_m"
+                        android:layout_weight="1"
+                        android:text="Wind"
+                        android:textAppearance="@style/TextAppearance.WeatherApp.MetricValue" />
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- Humidity -->
+            <com.google.android.material.card.MaterialCardView
+                style="@style/Widget.WeatherApp.MetricCard"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/space_s">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="@dimen/icon_chip_size"
+                        android:layout_height="@dimen/icon_chip_size"
+                        android:background="@drawable/bg_icon_chip"
+                        android:contentDescription="@string/cd_humidity"
+                        android:padding="@dimen/icon_chip_padding"
+                        android:src="@drawable/ic_humidity" />
+
+                    <TextView
+                        android:id="@+id/tvHumidity"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/space_m"
+                        android:layout_weight="1"
+                        android:text="Humidity"
+                        android:textAppearance="@style/TextAppearance.WeatherApp.MetricValue" />
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- Visibility -->
+            <com.google.android.material.card.MaterialCardView
+                style="@style/Widget.WeatherApp.MetricCard"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/space_s">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="@dimen/icon_chip_size"
+                        android:layout_height="@dimen/icon_chip_size"
+                        android:background="@drawable/bg_icon_chip"
+                        android:contentDescription="@string/cd_visibility"
+                        android:padding="@dimen/icon_chip_padding"
+                        android:src="@drawable/ic_visibility" />
+
+                    <TextView
+                        android:id="@+id/tvVisibility"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/space_m"
+                        android:layout_weight="1"
+                        android:text="Visibility"
+                        android:textAppearance="@style/TextAppearance.WeatherApp.MetricValue" />
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+        </LinearLayout>
+    </ScrollView>
+
+    <!-- ===== Search FAB ===== -->
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:layout_margin="@dimen/fab_margin"
+        android:contentDescription="@string/cd_search"
+        app:srcCompat="@drawable/baseline_search_24" />
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

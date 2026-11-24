@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Single item: fade + rise. Used by the staggered layout animation. -->
+<set xmlns:android="http://schemas.android.com/apk/res/android"
+    android:duration="420"
+    android:interpolator="@android:interpolator/decelerate_quint">
+    <alpha
+        android:fromAlpha="0.0"
+        android:toAlpha="1.0" />
+    <translate
+        android:fromYDelta="12%p"
+        android:toYDelta="0" />
+</set>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Dark theme overrides — premium deep-navy "night sky" look -->
+    <color name="gradient_start">#0E1330</color>
+    <color name="gradient_end">#26325C</color>
+
+    <color name="surface_card">#1C2748</color>
+    <color name="surface_card_translucent">#B31C2748</color>
+    <color name="surface_hero">#1C2748</color>
+
+    <color name="text_primary">#F5F8FF</color>
+    <color name="text_secondary">#AEBBD8</color>
+
+    <color name="icon_tint">#8BA6FF</color>
+    <color name="icon_container">#2A3763</color>
+
+    <color name="fab_background">#5B7BFF</color>
+    <color name="fab_icon">#FFFFFF</color>
+</resources>

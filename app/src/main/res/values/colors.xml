@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- ===== Legacy colors (kept so existing references never break) ===== -->
+    <color name="purple_200">#FFBB86FC</color>
+    <color name="purple_500">#FF6200EE</color>
+    <color name="purple_700">#FF3700B3</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+    <color name="black">#FF000000</color>
+    <color name="dark">#FF0E1330</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="light">#FFFFFFFF</color>
+
+    <!-- ===== Brand palette (weather / sky theme) ===== -->
+    <color name="brand_primary">#4361EE</color>
+    <color name="brand_primary_dark">#2F49C9</color>
+    <color name="brand_accent">#00B4D8</color>
+
+    <!-- ===== Light theme surfaces & text (default values/) ===== -->
+    <color name="gradient_start">#B9D3FF</color>
+    <color name="gradient_end">#EAF1FF</color>
+
+    <color name="surface_card">#FFFFFF</color>
+    <color name="surface_card_translucent">#F2FFFFFF</color>
+    <color name="surface_hero">#FFFFFF</color>
+
+    <color name="text_primary">#101B3B</color>
+    <color name="text_secondary">#5A6B8C</color>
+
+    <color name="icon_tint">#4361EE</color>
+    <color name="icon_container">#E4EBFF</color>
+
+    <color name="fab_background">#4361EE</color>
+    <color name="fab_icon">#FFFFFF</color>
+</resources>

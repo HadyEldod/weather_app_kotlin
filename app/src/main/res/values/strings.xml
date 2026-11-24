@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">Weather App</string>
+
+    <!-- Labels -->
+    <string name="details">Details</string>
+    <string name="search_title">Weather</string>
+    <string name="search_subtitle">Search for any city to see its live forecast</string>
+    <string name="hint_city">Enter city name</string>
+    <string name="action_search">Search</string>
+
+    <!-- Content descriptions (accessibility) -->
+    <string name="cd_location">Location</string>
+    <string name="cd_wind">Wind</string>
+    <string name="cd_humidity">Humidity</string>
+    <string name="cd_visibility">Visibility</string>
+    <string name="cd_search">Search city</string>
+</resources>

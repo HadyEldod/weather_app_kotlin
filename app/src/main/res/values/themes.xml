@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <!-- Base application theme (light). Dark variant lives in values-night/themes.xml -->
+    <style name="Theme.WeatherApp" parent="Theme.Material3.DayNight.NoActionBar">
+        <!-- Brand color roles -->
+        <item name="colorPrimary">@color/brand_primary</item>
+        <item name="colorPrimaryDark">@color/brand_primary_dark</item>
+        <item name="colorSecondary">@color/brand_accent</item>
+        <item name="colorOnPrimary">@color/white</item>
+
+        <!-- Edge-to-edge: transparent system bars, insets handled in code -->
+        <item name="android:statusBarColor">@android:color/transparent</item>
+        <item name="android:navigationBarColor">@android:color/transparent</item>
+        <item name="android:windowLightStatusBar" tools:targetApi="m">false</item>
+
+        <!-- Component defaults -->
+        <item name="materialCardViewStyle">@style/Widget.WeatherApp.Card</item>
+        <item name="floatingActionButtonStyle">@style/Widget.WeatherApp.Fab</item>
+    </style>
+
+    <!-- ===== Card style ===== -->
+    <style name="Widget.WeatherApp.Card" parent="Widget.Material3.CardView.Elevated">
+        <item name="cardBackgroundColor">@color/surface_card</item>
+        <item name="cardCornerRadius">@dimen/card_corner_small</item>
+        <item name="cardElevation">@dimen/card_elevation</item>
+        <item name="contentPadding">@dimen/space_m</item>
+    </style>
+
+    <!-- ===== FAB style ===== -->
+    <style name="Widget.WeatherApp.Fab" parent="Widget.Material3.FloatingActionButton.Primary">
+        <item name="backgroundTint">@color/fab_background</item>
+        <item name="tint">@color/fab_icon</item>
+        <item name="elevation">@dimen/card_elevation</item>
+        <item name="borderWidth">0dp</item>
+    </style>
+
+    <!-- ===== Typography ===== -->
+    <style name="TextAppearance.WeatherApp.City" parent="TextAppearance.Material3.HeadlineSmall">
+        <item name="android:textColor">@color/text_primary</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:letterSpacing">0.01</item>
+    </style>
+
+    <style name="TextAppearance.WeatherApp.Status" parent="TextAppearance.Material3.TitleMedium">
+        <item name="android:textColor">@color/text_secondary</item>
+    </style>
+
+    <style name="TextAppearance.WeatherApp.Temp" parent="TextAppearance.Material3.DisplayLarge">
+        <item name="android:textColor">@color/text_primary</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="TextAppearance.WeatherApp.MetricLabel" parent="TextAppearance.Material3.LabelMedium">
+        <item name="android:textColor">@color/text_secondary</item>
+        <item name="android:textAllCaps">true</item>
+        <item name="android:letterSpacing">0.06</item>
+    </style>
+
+    <style name="TextAppearance.WeatherApp.MetricValue" parent="TextAppearance.Material3.TitleMedium">
+        <item name="android:textColor">@color/text_primary</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <!-- ===== Metric card (info rows) ===== -->
+    <style name="Widget.WeatherApp.MetricCard" parent="Widget.WeatherApp.Card">
+        <item name="cardCornerRadius">@dimen/card_corner_small</item>
+        <item name="contentPadding">@dimen/space_m</item>
+    </style>
+
+    <!-- ===== Primary button (search screen) ===== -->
+    <style name="Widget.WeatherApp.Button" parent="Widget.Material3.Button">
+        <item name="cornerRadius">18dp</item>
+        <item name="android:paddingTop">14dp</item>
+        <item name="android:paddingBottom">14dp</item>
+        <item name="android:textSize">16sp</item>
+    </style>
+
+</resources>

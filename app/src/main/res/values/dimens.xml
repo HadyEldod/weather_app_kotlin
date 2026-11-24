@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Spacing scale (8dp grid) -->
+    <dimen name="space_xs">4dp</dimen>
+    <dimen name="space_s">8dp</dimen>
+    <dimen name="space_m">16dp</dimen>
+    <dimen name="space_l">24dp</dimen>
+    <dimen name="space_xl">32dp</dimen>
+
+    <!-- Screen edge padding -->
+    <dimen name="screen_padding">20dp</dimen>
+
+    <!-- Cards -->
+    <dimen name="card_corner">24dp</dimen>
+    <dimen name="card_corner_small">18dp</dimen>
+    <dimen name="card_elevation">6dp</dimen>
+    <dimen name="hero_elevation">10dp</dimen>
+
+    <!-- Icon chip -->
+    <dimen name="icon_chip_size">44dp</dimen>
+    <dimen name="icon_chip_padding">10dp</dimen>
+
+    <!-- FAB -->
+    <dimen name="fab_margin">24dp</dimen>
+</resources>
